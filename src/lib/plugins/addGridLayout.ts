@@ -67,14 +67,11 @@ export const addGridLayout =
 					return { attrs };
 				},
 				'thead.tr.th': (cell) => {
-					const attrs = derived([], () => {
-						return {
-							style: {
-								'grid-column': `${cell.colstart + 1} / span ${cell.colspan}`,
-							},
-						};
-					});
-					return { attrs };
+					return {
+						style: {
+							'grid-column': `${cell.colstart + 1} / span ${cell.colspan}`,
+						},
+					};
 				},
 				'tbody.tr': () => {
 					const attrs = derived([], () => {
